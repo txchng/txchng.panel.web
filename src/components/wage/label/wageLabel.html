@@ -1,0 +1,12 @@
+<div
+  class="tooltip"
+  :aria-label="percentage"
+  v-if = 'roundPercentage'
+>
+  <PriceLabel
+    :price = 'wagePrice'
+  />
+    <small>
+        {{roundPercentage}}%
+    </small>
+</div>

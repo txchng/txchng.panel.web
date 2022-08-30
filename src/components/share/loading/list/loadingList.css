@@ -1,0 +1,74 @@
+.search-input-loading .show-loading span {
+    margin: 25px 0px;
+    font-size: 12px;
+}
+
+.search-input-loading .show-loading {
+    padding: 10px 0 30px 0;
+}
+
+.search-input-loading  {
+    z-index: 10000000000;
+}
+.search-input-loading .spinner {
+    width: 20px;
+    height: 20px;
+    margin: 10px auto;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    margin: 100px auto;
+    -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+    0% {
+        -webkit-transform: perspective(120px)
+    }
+    50% {
+        -webkit-transform: perspective(120px) rotateY(180deg)
+    }
+    100% {
+        -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+    }
+}
+
+@keyframes sk-rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+    }
+    50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+    }
+    100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
+
+.show-loading span {
+    text-align: center;
+    position: absolute;
+    margin-top: 65px;
+    color: #3e3f42;
+    direction: rtl;
+}
+
+.show-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    width: 100%;
+    padding: 120px 0 175px 0;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+    border: solid 1px #eaedf3;
+    background-color: #ffffff;
+}

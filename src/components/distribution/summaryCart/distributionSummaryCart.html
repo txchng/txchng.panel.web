@@ -1,0 +1,65 @@
+<dl>
+    <dt>
+        مقدّم الطلب
+    </dt>
+    <dd>
+        {{remittance.intermediateCompany.name}}
+    </dd>
+    <dt>
+        المبلغ
+    </dt>
+    <dd>
+      <PriceLabel
+        :price = 'remittance.price'
+      />
+      <CurrencyLabel
+        :currency='remittance.currency'
+      />
+    </dd>
+    <dt>
+        العمولة
+    </dt>
+    <dd class="summary-wage">
+        <WageLable
+                :price='remittance.price'
+                :wagePrice='remittance.distributorCompanyWagePrice'
+        />
+    </dd>
+    <dt>
+        المستلم
+    </dt>
+    <dd>
+        <UserLabel
+          :user = 'remittance.receiver.user'
+        />
+    </dd>
+    <dt>
+        تاریخ الإتفاق
+    </dt>
+    <dd>
+        <div class="summary-date">
+            <DateTimeLabel
+                    :date='remittance.requestAt'
+            />
+        </div>
+    </dd>
+    <dt>
+      Attachment
+    </dt>
+    <dd>
+      <ul
+        v-if='remittance.attachmentFileNameList && remittance.attachmentFileNameList.length>0'
+      >
+        <li
+          v-for='(attachmentFileName,index) in remittance.attachmentFileNameList'
+        >
+          <a
+            :href="getAttachmentUrl(attachmentFileName)"
+            target="_blank"
+            v-bind:style="{ content: 'url(' + getAttachmentUrl(attachmentFileName) +')' }"
+          >
+          </a>
+        </li>
+      </ul>
+    </dd>
+</dl>

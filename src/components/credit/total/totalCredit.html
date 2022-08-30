@@ -1,0 +1,48 @@
+<div class="creditPanel">
+
+    <div>
+        <h1>
+          اعتبارات
+        </h1>
+
+        <LoadingList
+          v-if = 'isLoading'
+        />
+
+
+        <ul
+          v-if = '!isLoading'
+        >
+            <li v-for='(data,index) in dataSet'>
+                <dl class="">
+                    <!-- <dt class="">
+                        واحد پول
+                    </dt> -->
+                    <dt class="">
+                        شرکه
+                    </dt>
+                    <dd >
+                      {{data.coworkerCompany.name}}
+                    </dd>
+                    <dt class="">
+                        العملة
+                    </dt>
+                    <dd :class="['currency', 'currency-'+data.currency.code]">
+                        <CurrencyLabel :currency='data.currency'/>
+                    </dd>
+                    <!-- <dt>
+                        مبلغ
+                    </dt> -->
+                    <dt>
+                        المبلغ
+                    </dt>
+                    <dd class="price">
+                      <PriceLabel
+                        :price = 'data.total'
+                      />
+                    </dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+</div>

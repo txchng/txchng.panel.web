@@ -1,0 +1,40 @@
+<div class="userPanel">
+    <div
+      class="current-user-tag"
+      v-if='isNewUser == false && userPosition._id'
+    >
+        <UserLabel
+                :user='userPosition'
+        />
+        <button
+                type="button"
+                class="goToCurrentUser"
+                @click='goToSearchUser()'
+        ></button>
+    </div>
+    <userSearchBox
+            v-if='isNewUser == false && !userPosition._id'
+            :onUserTitleChanged='userTitleChanged'
+            :onUserSelectedd='userSelected'
+            :positionTitle='positionTitle'
+            :token='token'
+    />
+    <UserInput
+            v-if='isNewUser == true'
+            :userTitle='userPosition.title'
+            :onDataChanged='userSelected'
+    />
+    <button
+            v-if='isNewUser == false && userPosition && userPosition.title.length >= 2 && !userPosition._id'
+            type="button"
+            name="button"
+            class="addAsNewUser"
+            @click='addAsNewUser()'> {{userPosition.title}} المستخدم جدید
+    </button>
+    <button
+            v-if='isNewUser == true'
+            type="button"
+            class="goToSearchUser"
+            @click='goToSearchUser()'>
+    </button>
+</div>

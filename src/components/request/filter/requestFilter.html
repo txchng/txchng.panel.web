@@ -1,0 +1,20 @@
+<div class="left-options">
+            <span>الحالة : </span>
+            <select
+                    @change="selectStatus($event)"
+            >
+                <option
+                        v-for='status in statusList'
+                        v-bind:value='status.systemValue'
+                >
+                    {{status.ar_title}}
+                </option>
+            </select>
+    <input
+            type="search"
+            class="search"
+            placeholder="بحث"
+            v-model='searchKeyword'
+            @input='seachKeywordChanged'
+    >
+</div>

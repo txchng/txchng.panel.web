@@ -1,0 +1,11 @@
+<div class="">
+  <select class="" name="" v-model='selectedDistributorCompany'>
+    <option v-for= 'company in companyList' v-bind:value='company'>
+      {{company.name}}
+    </option>
+  </select>
+  <button
+    type="button"
+    @click = 'sendDisterbutionRequest()'
+  >Send Request</button>
+</div>

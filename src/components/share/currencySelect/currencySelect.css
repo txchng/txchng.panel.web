@@ -1,0 +1,29 @@
+option:hover {
+    border: none !important;
+}
+
+option {
+    -ms-progress-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none !important;
+    height: 5rem !important;
+}
+
+select {
+    -ms-progress-appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+    border: solid 1px #d8dce6 !important;
+    background-color: #ffffff;
+    border-radius: 4px !important;
+    height: 38px;
+    direction: rtl;
+    background-image: url(../../../assets/images/shared/bx-chevron-down.svg);
+    background-repeat: no-repeat;
+    background-size: 7.9px 4.9px;
+    background-position: 10% 50%;
+    padding-right: 10px;
+}

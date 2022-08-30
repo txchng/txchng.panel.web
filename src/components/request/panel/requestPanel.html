@@ -1,0 +1,61 @@
+<div class="divRequestPanel">
+    <SetWageModal
+            v-if='showSetRequestWageModal'
+            v-bind:token='token'
+            v-bind:request='selectedSetWageRequest'
+            :onCloseMethod='hideSetWageModal'
+    />
+
+    <ConfirmRejectRequestModal
+            v-if='showRejectRequestModal'
+            v-bind:request='selectedRejectWageRequest'
+            :onConfirmMethod='rejectRequest'
+            :onCancelMethod='hideRejectRequestConfirmModal'
+    />
+
+    <div class="list-top-options">
+        <span class="title">
+          قائمة الطلبات
+        </span>
+
+        <a
+          class='exoprtToExcel'
+          :href="'http://116.203.75.73:8002/request/export/'+token"
+          download
+        >
+          Excel
+        </a>
+
+        <DateSelectorInput
+          :onDateTimeSelectedMethod='setDateTime'
+        />
+
+        <RequestFilter
+                v-if='!isLoading && requestList.length > 0'
+                :onFilterObjectChanged='filteChanged'
+        />
+    </div>
+
+    <RequestList
+            v-if='!isLoading && requestList.length > 0 && visibleRequestList.length > 0'
+            v-bind:requestList='visibleRequestList'
+            :onSetRequestWageSelectedMethod='showSetWageModal'
+            :onRequestRejectSelectedMethod='showRejectRequestConfrimModal'
+    />
+    <LoadingList
+            v-if='isLoading'
+    />
+    <div class="no-search-item"
+         v-if='!isLoading && requestList.length > 0 && visibleRequestList.length == 0'
+    >
+        <span>
+      لم یتم العثور علی ما تبحث عنه
+            </span>
+    </div>
+    <div
+            class="no-item"
+            v-if='!isLoading && requestList.length == 0'
+    >
+        <span>لم تتم إضافة أي شيء حتى الآن</span>
+    </div>
+</div>

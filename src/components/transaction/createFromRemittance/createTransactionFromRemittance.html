@@ -1,0 +1,60 @@
+<div class="addRemittance">
+  <div
+    class=""
+    v-if = '!isLoading'
+  >
+    <div class="card-header">
+      ثبت صندوق
+    </div>
+    <div class="card">
+      <form class="">
+        <fieldset
+          class="fieldset"
+          :disabled = isLoading
+        >
+          <div class="remittance-items" id='applicantDiv'>
+            <div class="left-inputs">
+              <UserLabel
+                id='customer'
+                :user = 'remittance.receiver.user'
+              />
+
+            </div>
+            <label>
+                مقدّم الطلب
+            </label>
+          </div>
+          <div class="remittance-items">
+                صرف
+                <PriceLabel
+                  :price = 'remittance.price'
+                ></PriceLabel>
+                <CurrencyLabel
+                  :currency = 'remittance.currency'
+                ></CurrencyLabel>
+          </div>
+
+          <button
+            class="createRemittance"
+            name="createTransaction"
+            id="createTransaction"
+            @click='createTransaction()'
+          >
+              تسجیل
+          </button>
+          <button
+                  class="return"
+                  type="button"
+                  name="button"
+                  @click='goToList()'
+          >
+              العودة
+          </button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <LoadingList
+    v-if = 'isLoading'
+  ></LoadingList>
+</div>

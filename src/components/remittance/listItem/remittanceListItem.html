@@ -1,0 +1,64 @@
+<dl :class="[bgColor]">
+    <dd class="width-10"><span class="tooltip" :aria-label="remittance._id">{{remittance._id}}</span></dd>
+    <dd class="width-15">
+        <span
+          class="tooltip"
+          :aria-label="remittance.intermediateCompany.name"
+        >
+          <UserLabel
+            v-if='remittance.applicant && remittance.applicant.user'
+            :user = 'remittance.applicant.user'
+          />
+        </span>
+    </dd>
+    <dd
+      class="width-10"
+      style="font-family:Arial"
+    >
+      <PriceLabel
+        :price = 'remittance.price'
+      ></PriceLabel>
+    </dd>
+    <dd class="width-10">
+        <CurrencyLabel v-bind:currency='remittance.currency'/>
+    </dd>
+    <dd class="width-10">
+        <WageLable
+                :price='remittance.price'
+                :wagePrice='remittance.intermediateCompanyWagePrice'
+        />
+    </dd>
+    <dd class="width-10">
+        <WageLable
+                :price='remittance.price'
+                :wagePrice='remittance.distributorCompanyWagePrice'
+        />
+    </dd>
+    <dd
+      class="width-15"
+    >
+      <UserLabel
+        v-if= 'remittance.receiver && remittance.receiver.user'
+        :user = 'remittance.receiver.user'
+      />
+    </dd>
+    <dd class="width-10">
+        <div class="table-date">
+            <DateTimeLabel
+                    :date='remittance.requestAt'
+            />
+        </div>
+    </dd>
+    <dd class="width-10">
+        <RemittanceStatusIcon
+                :status='remittance.status'
+        />
+    </dd>
+    <dd class="width-10 action-btns">
+        <button
+                type="button"
+                @click='delivered'
+                class="tooltip delivered" aria-label="تعیین الموزع">
+        </button>
+    </dd>
+</dl>

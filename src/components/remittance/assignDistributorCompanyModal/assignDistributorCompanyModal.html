@@ -1,0 +1,21 @@
+<div class="">
+  <select class="" name="" v-model='selectedDistributorCompany'>
+    <option v-for= 'company in companyList' v-bind:value='company'>
+      {{company.name}}
+    </option>
+  </select>
+  <label for="txtDistributorCompanyWagePrice">Distributor Company Wage Price:</label>
+  <input
+    id = 'txtDistributorCompanyWagePrice'
+    type = "number"
+    v-model = 'distributorCompanyWage.price'
+  >
+  <label for="cmbDistributorCompanyWageCurrency">currency:</label>
+  <CurrencySelect
+    :onCurrencySelectedMethod = 'setCurrency'
+  />
+  <button
+    type="button"
+    @click = 'setDisterbuterCompany()'
+  >Set</button>
+</div>

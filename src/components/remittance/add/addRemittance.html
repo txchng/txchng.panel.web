@@ -1,0 +1,79 @@
+<div class="addRemittance">
+    <div>
+        <div class="card-header">تسجیل الحوالة الصادرة</div>
+        <div class="card">
+            <form>
+                <fieldset class="fieldset">
+                    <div class="remittance-items" id='applicantDiv'>
+                        <div class="left-inputs">
+                            <UserPanel
+                                    :onUserSelected='setApplicantUser'
+                                    v-bind:positionTitle='applicantPositionTitle'
+                                    v-bind:token="token"
+                            />
+                        </div>
+                        <label>
+                            مقدّم الطلب
+                        </label>
+                    </div>
+                    <div class="remittance-items">
+                        <div class="left-inputs">
+                            <PriceInput
+                                    :currencyList='currencyList'
+                                    :onValidPriceSelectedMethod='setPrice'
+                            />
+                        </div>
+                        <label for="remittancePrice">المبلغ و العمولة</label>
+                    </div>
+                    <div class="remittance-items">
+                        <div class="left-inputs">
+                            <WageInput
+                                    :price='remittance.price'
+                                    :onWagePriceSelectedMethod='setWage'
+                            />
+                        </div>
+                        <label>العمولة</label>
+                    </div>
+                    <div id='receiverDiv' class="remittance-items">
+                        <div class="left-inputs">
+                            <UserPanel
+                                    :onUserSelected='setReceiverUser'
+                                    v-bind:positionTitle='receiverPositionTitle'
+                                    v-bind:token="token"
+                            />
+                        </div>
+                        <label>المستلم</label>
+                    </div>
+                    <SendDistributionRequestModal
+                            v-if="remittance._id"
+                            v-bind:remittanceId='remittance._id'
+                            v-bind:token='token'
+                    />
+                    <AssignDistributorCompanyModal
+                            v-if="remittance._id"
+                            v-bind:remittanceId='remittance._id'
+                            v-bind:token='token'
+                    />
+                    <div class="bottom-border"></div>
+                    <button
+                            type="button"
+                            name="button"
+                            class="createRemittance"
+                            @click='createRemittance()'
+                            :disabled = !isValidRemittance
+                    >
+                        تسجیل الحوالة
+                    </button>
+                    <button
+                            class="return"
+                            type="button"
+                            name="button"
+                            @click='backToList()'
+                    >
+                        العودة
+                    </button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

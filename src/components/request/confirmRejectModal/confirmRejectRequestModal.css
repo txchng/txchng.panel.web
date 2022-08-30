@@ -1,0 +1,98 @@
+.message {
+    font-size: 14px;
+    line-height: 1.71;
+    text-align: right;
+    color: #3e3f42;
+}
+
+.header-close-btn {
+    background-image: url(../../../assets/images/shared/close.svg);
+    background-repeat: no-repeat;
+    background-size: 13.9px 9.9px;
+    width: 20px;
+    cursor: pointer;
+    height: 12px;
+}
+
+.rejectBtn {
+    width: 112px;
+    height: 38px;
+    box-shadow: 0 1px 1px 0 rgba(43, 26, 24, 0.1);
+    border: solid 1px #db0b17;
+    background-color: #e6492d;
+    border-radius: 4px;
+    color: white;
+}
+
+
+.cancelReject {
+    width: 64px;
+    margin-right: 15px;
+    height: 38px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+    border: solid 1px #d8dce6;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.modal {
+    width: 355.8px;
+    margin: 15px;
+    border-radius: 4px;
+    background: #FFFFFF;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.28;
+    text-align: right;
+    color: #3e3f42;
+    margin-bottom: 32px;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+
+.modal-footer {
+    padding: 15px 32px;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #eeeeee;
+}
+
+.modal-body {
+    position: relative;
+    padding: 32px;
+}

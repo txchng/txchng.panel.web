@@ -1,0 +1,29 @@
+<ul>
+    <li>
+        <ul class="contacts-header">
+            <li class="width-15">التاریخ</li>
+            <li class="width-10">المبلغ</li>
+            <li class="width-10">العملة</li>
+            <li class="width-20">
+              مشتری
+            </li>
+            <li class="width-20">
+              الحالة
+            </li>
+            <li class="width-30">الشرح</li>
+            <li class="width-15">الإجرائات</li>
+        </ul>
+    </li>
+    <li class="scrollbar">
+        <div v-for='(transaction,index) in transactionList' class="items">
+            <TransactionListItem v-bind:transaction='transaction' v-bind:index='index'/>
+        </div>
+    </li>
+    <li>
+        <button type="button">
+            <span class="show-more">
+                <span>                شاهد المزید</span>
+            </span>
+        </button>
+    </li>
+</ul>

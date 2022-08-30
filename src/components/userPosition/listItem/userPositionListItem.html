@@ -1,0 +1,22 @@
+<dl :class="[bgColor]">
+    <dd class="width-10">
+      <span
+        class="tooltip"
+        :aria-label="userPosition._id"
+      >
+        {{userPosition._id}}
+      </span>
+    </dd>
+
+    <dd class="width-15">
+        <span
+          class="tooltip"
+          :aria-label="userPosition.user.name"
+        >
+          <UserLabel
+            v-if='userPosition.user'
+            :user = 'userPosition.user'
+          />
+        </span>
+    </dd>
+</dl>

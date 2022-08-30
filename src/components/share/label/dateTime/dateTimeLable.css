@@ -1,0 +1,13 @@
+.table-date small {
+    font-size: 11px;
+    line-height: 1.91;
+    text-align: right;
+    color: #9ea0a5;
+    display: block;
+}
+
+.summary-date small {
+    display: block;
+    line-height: 0.91 !important;
+    text-align: left !important;
+}

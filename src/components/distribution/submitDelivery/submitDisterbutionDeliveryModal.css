@@ -1,0 +1,224 @@
+.dz-message {
+    margin: 0 !important;
+}
+
+.upload-has-error span {
+    margin-top: 7px;
+    color: #e6492d;
+    font-size: 12px;
+}
+
+.upload-has-error {
+    width: 97%;
+    position: relative;
+    right: 0;
+    top: 28px;
+    margin-left: 9px;
+    border-top: 2px solid #e6492d;
+}
+
+.upload-size-line {
+    width: 60%;
+    position: relative;
+    right: 0;
+    top: 27px;
+    margin-left: 9px;
+    border-top: 2px solid #1665d8;
+}
+
+
+.uploaded-file {
+    background-image: url(../../../assets/images/distribution/File Icon psd.svg);
+    background-repeat: no-repeat;
+    background-size: 27px 36px;
+    width: 27px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+}
+
+.upload-warning, .is-uploading {
+    background-image: url(../../../assets/images/distribution/File Icon ai.svg);
+    background-repeat: no-repeat;
+    background-size: 27px 36px;
+    width: 27px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+}
+
+.file-info {
+    margin-left: 35px;
+}
+
+.file-name {
+    color: #131820;
+    font-size: 14px;
+}
+
+.is-uploading + .w-100 {
+    margin-top: -20px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.upload .header-close-btn {
+    position: absolute;
+    right: 22px;
+}
+.header-close-btn {
+    background-image: url(../../../assets/images/shared/close.svg);
+    background-repeat: no-repeat;
+    background-size: 13.9px 9.9px;
+    width: 20px;
+    cursor: pointer;
+    height: 12px;
+}
+.upload {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.upload-line {
+    border-top: 2px solid #eaedf3;
+    width: 97%;
+    position: relative;
+    right: 0;
+    top: 29px;
+    margin-left: 9px;
+}
+
+.upload-warning .file-name, .is-uploading .file-name {
+    color: #9ea0a5 !important;
+}
+
+.file-size {
+    color: #9ea0a5;
+    font-size: 14px;
+    white-space: pre;
+}
+
+.dropzone-custom-title {
+    font-family: Vazir;
+    font-size: 18px;
+    line-height: 1.83;
+    color: #6b6c6f;
+    font-weight: normal;
+}
+
+
+.dropzone {
+    border: 1px dashed #d0d7dd;
+    border-radius: 5px;
+    min-height: 110px;
+    height: auto;
+}
+
+.dropzone.dz-clickable .dz-message {
+    top: -30px !important;
+    position: relative !important;
+}
+
+.dropzone-custom-content .subtitle {
+    top: 26px;
+    font-family: Vazir;
+    font-size: 14px;
+}
+
+.dropzone.dz-clickable .dz-message, .dropzone.dz-clickable .dz-message * {
+    margin: -27px 0 !important
+}
+
+.text-primary {
+    color: #1665d8;
+}
+
+.subtitle {
+    font-size: 14px;
+    line-height: 1.71;
+    text-align: right;
+    color: #3e3f42;
+    position: relative;
+    top: -25px;
+}
+
+.bntCancelReverseDistribution {
+    width: 64px;
+    margin-right: 15px;
+    height: 38px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+    border: solid 1px #d8dce6;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+.btnConfirmReverseDistribution {
+    width: 106px;
+    height: 38px;
+    box-shadow: 0 1px 1px 0 rgba(22, 29, 37, 0.1);
+    border: solid 1px #1461d2;
+    background-color: #1665d8;
+    border-radius: 4px;
+    color: white;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.
+{
+    cursor: pointer;
+    background-image: url(../../../assets/images/shared/close.svg);
+    background-repeat: no-repeat;
+    background-size: 13.9px 9.9px;
+    width: 20px;
+    height: 12px;
+}
+
+.modal {
+    width: 486px;
+    margin: 15px;
+    border-radius: 4px;
+    background: #FFFFFF;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.28;
+    text-align: right;
+    color: #3e3f42;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.modal-footer {
+    padding: 15px 27px;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #eeeeee;
+}
+
+.modal-body {
+    position: relative;
+    padding: 27px;
+}

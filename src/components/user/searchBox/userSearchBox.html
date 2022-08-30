@@ -1,0 +1,41 @@
+<div class="">
+    <input
+            v-model='userTitle'
+            type="search"
+            maxlength="20"
+            @input='userTitleChanged'>
+    <!--    <p-->
+    <!--      v-if = 'fetchingData'-->
+    <!--    >-->
+    <div
+      v-if='fetchingData'
+      class="search-input-loading"
+    >
+        <LoadingList/>
+    </div>
+    <ul
+            id="browsers"
+            class="scrollbar"
+            v-if='!fetchingData && userList.length > 0'
+    >
+        <li
+                class="user-search-option"
+                v-for="user in userList"
+                @click='selectedUserChange(user)'
+        >
+            <span
+                    v-if='user.title'
+            >{{user.title}}</span>
+            <span
+                    v-if='user.firstname'
+            >{{user.firstname}}</span>
+            <span
+                    v-if='user.lastname'
+            >{{user.lastname}}</span>
+            <small
+                    v-if='user.cellNumber'>
+                {{user.cellNumber}}
+            </small>
+        </li>
+    </ul>
+</div>

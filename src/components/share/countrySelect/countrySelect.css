@@ -1,0 +1,8 @@
+select {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+    border: solid 1px #d8dce6;
+    background-color: #ffffff;
+    border-radius: 4px;
+    height: 38px;
+    direction: rtl;
+}

@@ -1,0 +1,8 @@
+<select
+  @change = 'onCurrencySelected($event)'
+  v-model = 'selectedCurrency'
+>
+  <option v-for= 'currency in currencyList' v-bind:value='currency._id'>
+    {{currency.ar_name}}
+  </option>
+</select>

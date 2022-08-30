@@ -1,0 +1,41 @@
+<div class="totalPendingDistribution">
+    <div>
+        <!-- <h1>
+            مجموع حواله های پخشی تحویل نشده
+        </h1> -->
+        <h1>
+          إجمالي الحوالات المسلمة الیوم
+        </h1>
+        <LoadingList
+          v-if = 'isLoading'
+        />
+        <ul
+          v-if = '!isLoading'
+        >
+            <li v-for='(dataSetItem,index) in dataSet'>
+                <dl class="">
+                    <!-- <dt class="">
+                        واحد پول
+                    </dt> -->
+                    <dt class="">
+                        العملة
+                    </dt>
+                    <dd :class="['currency', 'currency-'+dataSetItem.currency.code]">
+                        <CurrencyLabel :currency='dataSetItem.currency'/>
+                    </dd>
+                    <!-- <dt>
+                        مبلغ
+                    </dt> -->
+                    <dt>
+                        المبلغ
+                    </dt>
+                    <dd class="price">
+                      <PriceLabel
+                        :price = 'dataSetItem.total'
+                      />
+                    </dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+</div>

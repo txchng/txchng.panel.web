@@ -1,0 +1,46 @@
+<div class="divUserPositionPanel">
+    <div class="list-top-options">
+        <span
+          class="title"
+        >
+          قائمة مشتریان
+        </span>
+        <div class="left-options">
+            <!-- <RemittanceFilter
+                    v-if='!isLoading && remittanceList.length > 0'
+                    :onFilterObjectChanged='filteChanged'
+            /> -->
+        </div>
+    </div>
+    <LoadingList
+            v-if='isLoading'
+    ></LoadingList>
+    <UserPositionList
+      v-bind:userPositionList='userPositionList'
+    >
+    </UserPositionList>
+    <!-- <RemittanceList
+            v-if='!isLoading && remittanceList.length > 0 && visibleRemittanceList.length > 0'
+            v-bind:remittanceList='visibleRemittanceList'
+            :onDeliveredSelectedMethod='showSubmitDeliveryDistributionModal'
+    /> -->
+    
+    <div
+      class="no-search-item"
+      v-if='!isLoading && userPositionList.length > 0 && userPositionList.length == 0'
+    >
+      <span>
+        لم یتم العثور علی ما تبحث عنه
+      </span>
+    </div>
+
+    <div
+      class="no-item"
+      v-if='!isLoading && userPositionList.length == 0'
+    >
+        <span>
+          لم تتم إضافة أي شيء حتى الآن
+        </span>
+    </div>
+
+</div>

@@ -1,0 +1,22 @@
+<div class="modal-backdrop">
+    <div class="modal">
+        <div class="modal-body">
+            <header class="modal-header">
+                <div class="header-close-btn" @click='close()'></div>
+                <span>رد الطلب</span>
+            </header>
+            <requestSummaryCart
+              :request = "request"
+            />
+            <div class="message">هل متأکد من رد الطلب؟ سوف لا یمکن التراجع</div>
+        </div>
+        <footer class="modal-footer">
+            <button type="reset" class="cancelReject" name="bntCancelRejectRequest" @click='close()'>
+                الغاء
+            </button>
+            <button type="submit" class="rejectBtn" name="btnConfirmRejectRequest" @click='confirm()'>
+                نعم، رد الطلب
+            </button>
+        </footer>
+    </div>
+</div>

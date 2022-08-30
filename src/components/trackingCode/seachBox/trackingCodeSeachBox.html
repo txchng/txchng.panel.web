@@ -1,0 +1,38 @@
+<div class="">
+    <input placeholder="کد التتبع"
+           type="search"
+           v-model='searchKey'
+           @input='trackingCodeChanged'
+    >
+    <div class="details"
+         v-if='!isLoading && searchKey && trackingCode'
+    >
+        <button class="close" type="button" name="button"
+                @click='clearSearchKey()'
+        ></button>
+
+        <remittanceSummaryCart
+
+                :remittance='trackingCode.remittance'
+        />
+        <router-link
+                :to="'/remittance/detail/'+trackingCode.remittance._id"
+                target="_blank"
+                aria-label="التفاصیل"
+        >
+            التفاصیل
+        </router-link>
+
+    </div>
+    <div
+            class="no-search-item"
+            v-if='!isLoading && searchKey && searchKey.length == 5 && !trackingCode'
+    >
+      <span>
+          لم یوجد
+      </span>
+    </div>
+    <LoadingList
+            v-if='isLoading'
+    />
+</div>

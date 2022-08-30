@@ -1,0 +1,13 @@
+small {
+    font-size: 11px;
+    line-height: 1.91;
+    text-align: right;
+    color: #9ea0a5;
+    display: block;
+}
+
+.summary-wage small {
+    text-align: left !important;
+    line-height: 0.91 !important;
+    color: unset;
+}

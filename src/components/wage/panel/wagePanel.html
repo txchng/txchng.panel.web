@@ -1,0 +1,27 @@
+<div class="">
+  <h1>Wage Panel</h1>
+  <span
+    v-if='wageList.length == 0'
+  >
+    No Item Found
+  </span>
+  <dl
+    v-for='wage in wageList'
+  >
+    <dt>Co-Worker Company</dt>
+    <dd>{{wage.coWorkerCompany.name}}</dd>
+    <dt>Currency</dt>
+    <dd>{{wage.currency.name}}({{wage.currency.code}})</dd>
+    <dt>Min Price</dt>
+    <dd>{{wage.minPrice}}</dd>
+    <dt>Max Price</dt>
+    <dd>{{wage.maxPrice}}</dd>
+    <dt>Wage Price</dt>
+    <dd>{{wage.wagePrice}}</dd>
+    <dt>اعتبار</dt>
+    <dd>{{wage.totalCredit}}</dd>
+  </dl>
+  <AddWageModal
+    v-bind:token = 'token'
+  />
+</div>

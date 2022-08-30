@@ -1,0 +1,49 @@
+<div class="Login">
+    <div class="login-box">
+        <!--        <div class="multi-lang"></div>-->
+        <div class="multi-lang">
+        <ul>
+            <li>
+                <button type="button" class="multi-lang-button">
+                    <span>فارسی</span>
+                </button>
+                <ul class="dropdown user-links">
+                    <li>فارسی
+                    </li>
+                    <li>
+                        انگلیسی
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+        <form>
+            <div class="company-name">
+                <div class="company-logo"></div>
+                <span>                سامانه تبادل مشتری</span>
+            </div>
+            <div class="welcome-text">اهلا بکم</div>
+            <fieldset>
+                <ul>
+                    <li>
+                        <label for="txtEmail">برید الإلکترونی</label>
+                        <input type="email" class="text-left" name="txtEmail" v-model='email'/>
+                    </li>
+                    <li>
+                        <label for="txtPassword">کلمة السرّ</label>
+                        <input type="password" class="text-center" name="txtPassword" v-model='password'/>
+                        <span class="forget-pwd">نسيت كلمة السرّ</span>
+                    </li>
+                </ul>
+                <button
+                        type="button"
+                        name="btnLogin"
+                        @click='login()'>
+                    دخول
+                </button>
+            </fieldset>
+        </form>
+        <div class="login-img">
+        </div>
+    </div>
+</div>

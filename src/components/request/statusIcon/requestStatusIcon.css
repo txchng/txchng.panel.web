@@ -1,0 +1,29 @@
+
+.stat-dot {
+    border-radius: 15px;
+    padding: 0 10px;
+}
+
+.requestStatusIcon_New {
+    background-color: rgba(52, 170, 68, 0.1);
+    color: #34aa44;
+}
+
+.requestStatusIcon_Waged {
+    background-color: rgba(246, 171, 47, 0.1);
+    color: #f6ab2f;
+}
+
+.requestStatusIcon_Rejected {
+    background-color: rgba(188, 188, 188, 0.1);
+    color: #bcbcbc;
+}
+
+.requestStatusIcon_Canceled {
+    background-color: rgba(237, 206, 206, 0.42);
+    color: #e6492d;
+}
+.requestStatusIcon_Accepted {
+    background-color: rgba(7, 111, 255, 0.11);
+    color: #0089ff;
+}

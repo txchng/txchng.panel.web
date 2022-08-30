@@ -1,0 +1,95 @@
+<div class="modal-backdrop">
+    <div class="modal">
+        <form action="">
+            <fieldset class="fieldset">
+        <div class="modal-body">
+            <header class="modal-header">
+                <div class="header-close-btn" @click='close()'></div>
+                <!-- <span>
+                  افزودن شرکت جدید
+                </span> -->
+                <span>
+                  اضافة شرکة جدیدة
+                </span>
+            </header>
+            <div class="coworker-items">
+                <div class="left-inputs">
+                    <input type="text" id="txtCoWorkerCompanyName" v-model='coWorkercompany.name'>
+                </div>
+                <!-- <label for="txtCoWorkerCompanyName">عنوان شرکت</label> -->
+                <label for="txtCoWorkerCompanyName">اسم الشرکة</label>
+            </div>
+            <div class="coworker-items">
+                <div class="left-inputs">
+                    <input type="email" id="txtCoWorkerCompanyEmail" v-model='coWorkercompany.email'>
+                </div>
+                <!-- <label for="txtCoWorkerCompanyEmail">ایمیل شرکت</label> -->
+                <label for="txtCoWorkerCompanyEmail">برید الکترونی الشرکة</label>
+            </div>
+
+            <div class="coworker-items">
+                <div class="left-inputs">
+                    <input type="text" id="txtOwnerFistname" v-model='owner.firstname'>
+                </div>
+                <!-- <label for="txtOwnerFistname">نام صاحت شرکت</label> -->
+                <label for="txtOwnerFistname">إسم صاحب الشرکة</label>
+            </div>
+            <div class="coworker-items">
+                <div class="left-inputs">
+                    <input type="text" id="txtOwnerLastname" v-model='owner.lastname'>
+                </div>
+                <!-- <label for="txtOwnerLastname">نام خانوادگی صاحب شرکت</label> -->
+                <label for="txtOwnerLastname">إسم صاحب الشرکة</label>
+            </div>
+            <div class="coworker-items">
+                <div class="left-inputs">
+                    <input type="tel" id="txtOwnerCellphone" v-model='owner.cellNumber'>
+                </div>
+                <!-- <label for="txtOwnerCellphone">شماره موبایل صاحب شرکت</label> -->
+                <label for="txtOwnerCellphone">رقم جوال صاحب الشرکة</label>
+            </div>
+            <div class="coworker-items">
+                <div class="left-inputs">
+                    <input type="email" id="txtOwnerEmail" v-model='owner.email'>
+                </div>
+                <!-- <label for="txtOwnerEmail">ایمیل صاحب شرکت</label> -->
+                <label for="txtOwnerEmail">برید الکترونی صاحب الشرکة</label>
+            </div>
+        </div>
+        <footer class="modal-footer">
+
+            <!-- <button
+                    type="button"
+                    name="button"
+                    class="cancel"
+                    @click='close();'
+            >
+                لغو
+            </button> -->
+            <button
+                    type="button"
+                    name="button"
+                    class="cancel"
+                    @click='close();'
+            >
+                الغاء
+            </button>
+            <!-- <button
+                    type="button"
+                    class="confirmBtn"
+                    @click='addCoWorkerCompany()'
+            >
+                ثبت همکار
+            </button> -->
+            <button
+                    type="button"
+                    class="confirmBtn"
+                    @click='addCoWorkerCompany()'
+            >
+                تسجیل الزمیل
+            </button>
+        </footer>
+        </fieldset>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+.totalPendingDistribution {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.28;
+    text-align: right;
+    color: #ffffff;
+}
+
+ul {
+    list-style: none;
+}
+
+.currency-IQD {
+    background-image: url(../../../assets/images/shared/iraq.svg);
+}
+
+.currency-USD {
+    background-image: url(../../../assets/images/shared/usa.svg);
+
+}
+
+.currency {
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.currency span {
+    padding-right: 36px;
+    font-size: 16px;
+    line-height: 1.69;
+    color: #6b6c6f;
+}
+
+.price {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.54;
+}
+
+li {
+    padding: 20px 16px;
+    margin-bottom: 16px;
+    width: 445px;
+    height: 38px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+    border: solid 1px #eaedf3;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+dl {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    direction: rtl;
+}
+
+dd {
+    margin: 0
+}
+
+dt {
+    display: none
+}

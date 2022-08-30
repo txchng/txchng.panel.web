@@ -1,0 +1,53 @@
+<dl v-if='credit' :class="[bgColor]">
+    <dt>Register Date:</dt>
+    <dd class="width-15">
+      <DateTimeLabel
+              :date='credit.registrationDate'
+      />
+
+    </dd>
+
+    <dt>Price:</dt>
+    <dd class="width-10">
+      <PriceLabel
+        :price = 'credit.price'
+      />
+    </dd>
+
+    <dt>Currency:</dt>
+    <dd class="width-10">
+        <CurrencyLabel v-bind:currency='credit.currency'/>
+    </dd>
+
+    <dt
+      v-if='credit.to'
+    >
+      شرکت همکار
+    </dt>
+    <dd class="width-20">
+      {{credit.to? credit.to.name: credit._id.toString()}}
+    </dd>
+
+    <dt>Description:</dt>
+    <dd class="width-30 ">
+        <span class="tooltip" :aria-label="credit.description"> {{credit.description}}</span>
+       </dd>
+    <dt
+      v-if='credit.remittance'
+    ></dt>
+
+    <dd
+      v-if='credit.remittance'
+      class="width-15"
+    >
+        <button
+
+          type="button"
+          class="tooltip show-detail"
+          aria-label="مشاهدة الحوالة"
+          @click='showRemittanceDetail()'
+        >
+
+        </button>
+    </dd>
+</dl>

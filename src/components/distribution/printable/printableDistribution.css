@@ -1,0 +1,11 @@
+.signature{
+  direction: rtl;
+  border-style: solid;
+  height: 100px;
+  padding: 0;
+  font-size: 12px;
+  line-height: 2.4;
+  text-align: rtl;
+  color: #3e3f42;
+  margin: 0
+}

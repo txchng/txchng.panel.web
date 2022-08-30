@@ -1,0 +1,61 @@
+
+
+<div class="currencyPanel">
+    <div>
+        <div class="card-header"> مدیریت واحد پولی
+        </div>
+        <div class="card">
+            <form>
+                <fieldset class="fieldset">
+                    <div class="remittance-items">
+                        <div class="left-inputs">
+                            <ul
+                                    v-if='!isLoadingCurrencyList'
+                            >
+                                <li v-for='currency in currencyList'>
+                                    <button
+                                            type="button"
+                                            @click='addCurrency(currency._id)'
+                                    >
+                                        add
+                                    </button>
+                                    <CurrencyLabel
+                                            :currency='currency'
+                                    />
+                                </li>
+                            </ul>
+                        </div>
+                        <label>عنوان 1</label>
+                    </div>
+                    <div class="remittance-items">
+                        <div class="left-inputs">
+                            <ul
+                                    v-if='!isLoadingCompanyCurrencyList'
+                            >
+                                <li v-for='currency in companyCurrencyList'>
+                                    <button
+                                            type="button"
+                                            @click='removeCurrency(currency._id)'
+                                    >
+                                        remove
+                                    </button>
+                                    <CurrencyLabel
+                                            :currency='currency'
+                                    />
+                                </li>
+                            </ul>
+                        </div>
+                        <label>عنوان 2</label>
+                    </div> <div class="remittance-items">
+                        <div class="left-inputs">
+                            <LoadingList
+                                    v-if='isLoadingCurrencyList || isLoadingCompanyCurrencyList'
+                            />
+                        </div>
+                        <label>3</label>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

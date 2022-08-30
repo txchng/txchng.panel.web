@@ -1,0 +1,42 @@
+<div class="left-options">
+    <span>الحالة : </span>
+    <select
+            @change="selectStatus($event)"
+    >
+        <option
+                v-for='status in statusList'
+                v-bind:value='status.systemValue'
+        >
+            {{status.ar_title}}
+        </option>
+    </select>
+    <input
+            type="search"
+            class="search"
+            placeholder="بحث"
+            v-model='searchKeyword'
+            @input='seachKeywordChanged'
+    >
+    <div class="">
+      <label
+        for="txtFromDate"
+      >
+        از
+      </label>
+      <input
+        type="datetime-local"
+        name="txtFromDate"
+        value=""
+      >
+      <label
+        for="txtToDate"
+      >
+        تا
+      </label>
+      <input
+        type="datetime-local"
+        name="txtToDate"
+        value=""
+      >
+    </div>
+</div>

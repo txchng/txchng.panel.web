@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__bxs-show" width="20.108" height="14" viewBox="0 0 20.108 14">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:#bcbcbc}
+        </style>
+    </defs>
+    <path id="prefix__Path_15581" d="M12 5a10.487 10.487 0 0 0-9.948 6.684L1.946 12l.1.316A10.491 10.491 0 0 0 12 19a10.487 10.487 0 0 0 9.948-6.684l.106-.316-.1-.316A10.491 10.491 0 0 0 12 5zm0 11a4 4 0 1 1 4-4 4 4 0 0 1-4 4z" class="prefix__cls-1" data-name="Path 15581" transform="translate(-1.946 -5)"/>
+    <path id="prefix__Path_15582" d="M12 10a2 2 0 1 0 2 2 2.027 2.027 0 0 0-2-2z" class="prefix__cls-1" data-name="Path 15582" transform="translate(-1.946 -5)"/>
+</svg>

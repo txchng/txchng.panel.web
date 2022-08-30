@@ -1,0 +1,24 @@
+<div class="">
+
+  <button
+    type="button"
+    name="prevDate"
+    @click = 'goPrevDay()'
+  >
+    back
+  </button>
+  <input
+    type="date"
+    name="txtFromDate"
+    v-model='fromDateFromatedValue'
+    @change="dateTimeRangeChanged($event)"
+    style="font-family:Tahoma !important;"
+  >
+  <button
+    type="button"
+    name="nextDate"
+    @click = 'goNextDay()'
+  >
+    next
+  </button>
+</div>

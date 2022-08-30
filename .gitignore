@@ -1,0 +1,9 @@
+node_modules/
+.idea/
+
+# NativeScript application
+hooks
+platforms
+webpack.config.js
+dist/
+nginx/

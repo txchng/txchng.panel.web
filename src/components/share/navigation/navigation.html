@@ -1,0 +1,222 @@
+<nav>
+    <div class="container">
+        <div class="company-name">
+            <div class="company-logo"></div>
+            <span>سامانه تبادل مشتری</span>
+        </div>
+        <div class="second-nav">
+            <ul>
+                <li>
+                    <span>
+                      حوالات الصادرة
+                    </span>
+                    <ul class="dropdown user-links">
+                        <li>
+                            <router-link to="/remittance/add">
+                                تسجیل
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="/remittance/list">
+                                قائمة الحوالات
+                            </router-link>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span>
+                      حوالات الواردة
+                    </span>
+                    <ul class="dropdown user-links">
+                        <li>
+                            <router-link to="/distribution/add">
+                                تسجیل
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="/request/list">
+                                قائمة الطلبات
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="/distribution/list">
+                                قائمة الطلبات المتفق علیها
+                            </router-link>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span>صندوق</span>
+                    <ul class="dropdown user-links">
+                        <li>
+                            <router-link to="/transaction/list">
+                                تسجیل
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="/transaction/add">
+                                تقریر
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link
+                              to="/transaction/total"
+                            >
+                                اجمال
+                            </router-link>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span>
+                      صیرفة
+                    </span>
+                    <ul class="dropdown user-links">
+                        <li>
+                            <router-link to="/transaction/list">
+                                  قائمة
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="/transaction/list">
+                                تقریر
+                            </router-link>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                  <span>
+                    اعتبارات
+                  </span>
+                  <ul
+                    class="dropdown user-links"
+                  >
+                    <li>
+                        <router-link to="/credit/add">
+                            تقریر
+                        </router-link>
+                    </li>
+                    <li>
+                      <router-link to="/credit/list">
+                          قائمة الاعتبارات
+                      </router-link>
+                    </li>
+                    <li>
+                      <router-link to="/credit/total">
+                          اجمال الاعتبارات
+                      </router-link>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span>
+                    تقاریر
+                  </span>
+                  <ul class="dropdown user-links">
+                      <li>
+                          <router-link to="/remittance/totalPending">
+                            إجمالي الحوالات غير المسلمة
+                          </router-link>
+                      </li>
+                      <li>
+                          <router-link to="/remittance/todayTotalPending">
+                            إجمالي الحوالات غير المسلمة الیوم
+                          </router-link>
+                      </li>
+                      <li>
+                          <router-link to="/remittance/todayTotalDelivered">
+                            إجمالي الحوالات المسلمة الیوم
+                          </router-link>
+                      </li>
+
+                  </ul>
+                </li>
+                <li>
+                    <span>سایر</span>
+                    <ul class="dropdown user-links">
+                        <li>
+                            <router-link to="/setting/co-comapny">
+                              قائمة الزملاء
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="/setting/currency">
+                              العملة
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link
+                              to="/userPosition/list"
+                            >
+                              مشتریان
+                            </router-link>
+                        </li>
+
+                        <!-- <li>
+                            <router-link to="/setting/co-comapny">
+                                کارمزد
+                            </router-link>
+                        </li> -->
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="left-navbar">
+            <ul>
+                <li>
+                  <TrackingCodeSearchBox/>
+                </li>
+                <li>
+                    <div class="setting-img"></div>
+                </li>
+                <li>
+                    <div class="alerts-img"></div>
+                    <ul class="dropdown alerts">
+                        <li>پیام‌های من</li>
+                        <li><a href="">
+                            <div class="alerts-stat-img"></div>
+                            <div>
+                                <span>تراکنش جدید از طرف مکتب العلی ایجاد شده است</span>
+                                <small>4 ساعت پیش</small>
+                            </div>
+                        </a></li>
+                        <li>
+                            <a href="">
+                                <div class="alerts-stat-img"></div>
+                                <div>
+                                    <span>تراکنش جدید از طرف مکتب العلی ایجاد شده است</span>
+                                    <small>4 ساعت پیش</small>
+                                </div>
+                            </a></li>
+                        <li><a href="">مشاهده همه پیام ها</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="user-name">MS</div>
+                    <ul class="dropdown">
+                        <li class="user-name-box">
+                            <div class="user-section">
+                                <div class="user-name">MS</div>
+                                <div>
+                                    <span class="name">Mohammad Saeedi</span>
+                                    <small class="email">mymailname@mail.com</small>
+                                </div>
+                            </div>
+                            <div class="user-links">
+                                <a href="">ویرایش حساب کاربری</a>
+                                <a href="">تغییر رمز عبور</a>
+                                <button
+                                        type="button"
+                                        name="btnLogout"
+                                        @click='logout()'>
+                                    خروج
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="bg-blue"></div>
+</nav>

@@ -1,0 +1,34 @@
+<div class="coworkerCompanyPanel">
+    <LoadingList
+            v-if='isLoading'
+    />
+    <div class=""
+         v-if='!isLoading'
+    >
+        <div class="list-top-options">
+            <!-- <span class="title">لیست همکاران</span> -->
+            <span class="title">قائمة الزملاء</span>
+            <div class="left-options">
+                <!-- <button
+                        type="button"
+                        name="button"
+                        @click='showAddCoWorkerModal()'>
+                    افزودن همکار جدید
+                </button> -->
+                <button
+                        type="button"
+                        name="button"
+                        @click='showAddCoWorkerModal()'>
+                    اضافة زمیل جدید
+                </button>
+            </div>
+        </div>
+        <CoWorkerList
+                :coWorkerList='companyList'
+        />
+        <AddCoWorkerCompany
+                v-if='isAddCoworkerVisibile'
+                :onCloseMethod='hideAddCoWorkerModal'
+        />
+    </div>
+</div>
