@@ -1,0 +1,56 @@
+<dl>
+    <dt
+      v-if = 'remittance.applicant && remittance.applicant.user'
+    >
+        مقدّم الطلب
+    </dt>
+    <dd
+      v-if = 'remittance.applicant && remittance.applicant.user'
+    >
+      <UserLabel
+       :user = 'remittance.applicant.user'
+      />
+    </dd>
+    <dt>
+        المبلغ
+    </dt>
+    <dd>
+      <PriceLabel
+        :price = 'remittance.price'
+      />
+      <CurrencyLabel
+        :currency='remittance.currency'
+      />
+    </dd>
+    <dt>
+        العمولة
+    </dt>
+    <dd class="summary-wage">
+       <WageLable
+          :price='remittance.price'
+          :wagePrice='remittance.intermediateCompanyWagePrice'
+        />
+    </dd>
+    <dt
+      v-if = 'remittance.receiver && remittance.receiver.user'
+    >
+      المستلم
+    </dt>
+    <dd
+      v-if = 'remittance.receiver && remittance.receiver.user'
+    >
+      <UserLabel
+       :user = 'remittance.receiver.user'
+      />
+    </dd>
+    <dt>
+        تاریخ الإتفاق
+    </dt>
+    <dd>
+        <div class="summary-date">
+            <DateTimeLabel
+                    :date='remittance.requestAt'
+            />
+        </div>
+    </dd>
+</dl>

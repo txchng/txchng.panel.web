@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__EmptyState" width="250" height="200" viewBox="0 0 250 200">
+    <path id="prefix__Background" d="M46 70a7 7 0 1 1 0-14H7a7 7 0 1 1 0-14h40a7 7 0 0 0 0-14H22a7 7 0 0 1 0-14h40a7 7 0 1 1 0-14h98a7 7 0 0 1 0 14h-40a7 7 0 1 1 0 14h22a7 7 0 0 1 0 14h-10.174c-4.875 0-8.826 3.134-8.826 7s6 7 6 7a7 7 0 0 1 0 14zm107-35a7 7 0 1 1 7 7 7 7 0 0 1-7-7z" transform="translate(47 65)" style="fill:#f3f7ff"/>
+    <path id="prefix__Shape" d="M63 79.979H4a4 4 0 0 1-4-4V2a2 2 0 0 1 2-2h.021l4.888.051 3.953.04L13.7.122l52.336.529L67 69.122v6.857a4 4 0 0 1-4 4z" transform="rotate(-7 627.73 -684.093)" style="stroke-miterlimit:10;stroke-linecap:round;stroke-width:2.5px;stroke:#75a4fe;fill:#fff"/>
+    <path id="prefix__Rectangle" d="M59.136.609L60 62.66v6.215a3.6 3.6 0 0 1-3.582 3.625H3.582A3.6 3.6 0 0 1 0 68.875V2a2 2 0 0 1 2-2h6.536" transform="rotate(-7 658.258 -717.682)" style="fill:#e8f0fe"/>
+    <g id="prefix__Rectangle-2" data-name="Rectangle" style="stroke-miterlimit:10;fill:#fff">
+        <path d="M63 82.75H4c-1.516 0-2.75-1.234-2.75-2.75V4c0-1.516 1.234-2.75 2.75-2.75h45.557c.734 0 1.424.286 1.944.805L64.944 15.49c.52.52.806 1.21.806 1.945V80c0 1.516-1.234 2.75-2.75 2.75z" style="stroke:none" transform="translate(106.672 50)"/>
+        <path d="M4 2.5c-.827 0-1.5.673-1.5 1.5v76c0 .827.673 1.5 1.5 1.5h59c.827 0 1.5-.673 1.5-1.5V17.435c0-.4-.156-.778-.44-1.061L50.617 2.939c-.283-.283-.66-.439-1.06-.439H4M4 0h45.557c1.06 0 2.077.421 2.827 1.17l13.444 13.436c.75.75 1.172 1.768 1.172 2.829V80c0 2.21-1.79 4-4 4H4c-2.21 0-4-1.79-4-4V4c0-2.21 1.79-4 4-4z" style="fill:#75a4fe;stroke:none" transform="translate(106.672 50)"/>
+    </g>
+    <path id="prefix__Shape-2" d="M0 0v11.6a3 3 0 0 0 3 3h7.934" data-name="Shape" transform="translate(156.672 52.403)" style="fill:none;stroke-linejoin:round;stroke-miterlimit:10;stroke-linecap:round;stroke-width:2.5px;stroke:#75a4fe"/>
+    <path id="prefix__lines" d="M0 51.5zm0-13zm0-13zm0-13zm0-12z" transform="translate(118.672 66.5)" style="stroke:#a4c3fe;fill:none;stroke-linejoin:round;stroke-miterlimit:10;stroke-linecap:round;stroke-width:2.5px"/>
+</svg>

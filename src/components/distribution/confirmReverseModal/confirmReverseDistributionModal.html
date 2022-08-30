@@ -1,0 +1,34 @@
+<div class="modal-backdrop">
+  <div class="modal">
+    <div class="modal-body">
+      <header class="modal-header">
+        <div class="header-close-btn" @click='close()'></div>
+        <!-- <span>
+          رد توزیع
+        </span> -->
+        <span>
+          رد طلب توزیع الحوالة
+        </span>
+      </header>
+      <distributionSummaryCart
+        :remittance = 'remittance'
+      />
+      <!-- <div class="message">آیا از رد توزیغ مطمئن هستید؟ این اقدام برگشت ناپذیر است</div> -->
+      <div class="message">هل متأکد من رد طلب توزیع الحوالة؟ سوف لا یمکن التراجع</div>
+    </div>
+    <footer class="modal-footer">
+      <!-- <button type="reset" class="cancelReject" name="bntCancelReverseDistribution" @click='close()'>
+        لغو
+      </button> -->
+      <button type="reset" class="cancelReject" name="bntCancelReverseDistribution" @click='close()'>
+        الغاء
+      </button>
+      <!-- <button type="submit" class="rejectBtn" name="btnConfirmReverseDistribution" @click='confirm()'>
+        بله، در شود
+      </button> -->
+      <button type="submit" class="rejectBtn" name="btnConfirmReverseDistribution" @click='confirm()'>
+        نعم، رد الطلب
+      </button>
+    </footer>
+  </div>
+</div>

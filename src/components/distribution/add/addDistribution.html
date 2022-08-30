@@ -1,0 +1,102 @@
+<div class="addDistribution">
+    <div>
+        <div class="card-header">ثبت حواله وارده</div>
+        <div class="card">
+            <form action="">
+                <fieldset class="fieldset">
+                    <div class="remittance-items" id='applicantDiv'>
+                        <div class="left-inputs">
+                            <select
+                                    v-model='selectedIntermediateCompany'
+                            >
+                                <option
+                                        v-for='company in coworkerCompanyList'
+                                        v-bind:value='company'
+                                >
+                                    {{company.name}}
+                                </option>
+                            </select>
+                        </div>
+                        <label>شرکت همکار</label>
+                    </div>
+                    <div class="remittance-items">
+                        <div class="left-inputs">
+                            <PriceInput
+                                    :currencyList='currencyList'
+                                    :onValidPriceSelectedMethod='setPrice'
+                            />
+                        </div>
+                        <!-- <label for="remittancePrice">مبلغ و واحد</label> -->
+                        <label for="remittancePrice">المبلغ و العمولة</label>
+                    </div>
+                    <div class="remittance-items">
+                        <div class="left-inputs">
+                            <WageInput
+                                    v-bind:price='remittance.price'
+                                    :onWagePriceSelectedMethod='setWage'
+                            />
+                        </div>
+                        <!-- <label>کارمزد</label> -->
+                        <label>العمولة</label>
+                    </div>
+                    <div id='receiverDiv' class="remittance-items">
+                        <div class="left-inputs">
+                            <UserPanel
+                                    :onUserSelected='setReceiverUser'
+                                    v-bind:positionTitle='receiverPositionTitle'
+                                    v-bind:token="token"
+                            />
+                        </div>
+                        <!-- <label>دریافت کننده</label> -->
+                        <label>المستلم</label>
+                    </div>
+                    <SendDistributionRequestModal
+                            v-if="remittance._id"
+                            v-bind:remittanceId='remittance._id'
+                            v-bind:token='token'
+                    />
+                    <AssignDistributorCompanyModal
+                            v-if="remittance._id"
+                            v-bind:remittanceId='remittance._id'
+                            v-bind:token='token'
+                    />
+                    <div class="bottom-border"></div>
+                    <!-- <button
+                            type="button"
+                            name="button"
+                            class="createDistribution"
+                            @click='createDistribution()'
+                            :disabled = !isValidForm
+                    >
+                        ثبت حواله
+                    </button> -->
+                    <button
+                            type="button"
+                            name="button"
+                            class="createDistribution"
+                            @click='createDistribution()'
+                            :disabled = !isValidForm
+                    >
+                        تسجیل الحوالة
+                    </button>
+                    <!-- <button
+                            class="return"
+                            type="button"
+                            name="button"
+                            @click='backToList()'
+                    >
+                        بازگشت
+                    </button> -->
+                    <button
+                            class="return"
+                            type="button"
+                            name="button"
+                            @click='backToList()'
+                    >
+                        العودة
+                    </button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

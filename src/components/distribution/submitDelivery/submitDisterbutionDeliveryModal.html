@@ -1,0 +1,99 @@
+<div class="modal-backdrop">
+    <div class="modal">
+        <div class="modal-body">
+            <header class="modal-header">
+                <div class="header-close-btn" @click='close()'></div>
+                <!-- <span>تائید تحویل</span> -->
+                <span>تأیید التسلیم</span>
+            </header>
+            <!-- <div class="subtitle">مدارک مربوط به این درخواست را بارگذاری نمایید</div> -->
+            <div class="subtitle">حمّل المستمسکات المتعلقة بهذا الطلب</div>
+            <distributionSummaryCart
+              :remittance = 'remittance'
+            />
+                <!-- <div class="upload">
+                <div class="header-close-btn"></div>
+                <div class="uploaded-file">
+                    <div class="file-info">
+                        <span class="file-name">They_expected_all.psd</span>
+                        <span class="file-size">. 725 KB</span>
+                    </div>
+                </div>
+            </div>
+            <div class="upload">
+                <div class="header-close-btn"></div>
+                <div class="upload-warning">
+                    <div class="file-info">
+                        <span class="file-name">They_expected_all.psd</span>
+                        <span class="file-size">. 725 KB</span>
+                    </div>
+                </div>
+                <div class="w-100">
+                    <div class="upload-line"></div>
+                    <div class="upload-has-error">
+                        <span>حجم فایل بیش از ۲مگابایت است</span>
+                    </div>
+                </div>
+            </div>
+            <div class="upload">
+                <div class="header-close-btn"></div>
+                <div class="is-uploading">
+                    <div class="file-info">
+                        <span class="file-name">They_expected_all.psd</span>
+                        <span class="file-size">. 725 KB</span>
+                    </div>
+                </div>
+                <div class="w-100">
+                    <div class="upload-line"></div>
+                    <div class="upload-size-line">
+                    </div>
+                </div>
+            </div> -->
+
+
+            <dropzone
+                    id="attachment"
+                    ref="el"
+                    :options="uploadOptions"
+                    :destroyDropzone="true"
+                    >
+                <div class="dropzone-custom-content">
+                    <!-- <p class="dropzone-custom-title">فایل ها اینجا بکشید و رها کنید</p> -->
+                    <p class="dropzone-custom-title">اسحب الملفات وأفلتها هنا</p>
+                    <!-- <small class="subtitle">یا مستقیم
+                        <span class="text-primary">آپلود کنید</span>
+                    </small> -->
+                    <small class="subtitle">او
+                        <span class="text-primary">حمّلها من هنا</span>
+                    </small>
+                </div>
+            </dropzone>
+        </div>
+        <footer class="modal-footer">
+            <!-- <button type="button" class="bntCancelReverseDistribution" name="bntCancelReverseDistribution"
+                    @click='close()'>
+                لغو
+            </button> -->
+            <button type="button" class="bntCancelReverseDistribution" name="bntCancelReverseDistribution"
+                    @click='close()'>
+                الغاء
+            </button>
+            <!-- <button
+              @click='confirm()'
+              type="button"
+              class="btnConfirmReverseDistribution"
+              name="btnConfirmReverseDistribution"
+              >
+                تائید
+            </button> -->
+            <button
+              @click='confirm()'
+              type="button"
+              class="btnConfirmReverseDistribution"
+              name="btnConfirmReverseDistribution"
+              >
+                تأیید
+            </button>
+        </footer>
+    </div>
+</div>

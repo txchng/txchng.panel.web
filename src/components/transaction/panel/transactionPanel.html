@@ -1,0 +1,25 @@
+<div class="divRequestPanel">
+    <div class="list-top-options">
+        <span class="title">
+          الصفقات
+        </span>
+    </div>
+
+    <DateSelectorInput
+      :onDateTimeSelectedMethod='setDateTime'
+    />
+
+    <TransactionList
+      v-if='!isLoading'
+      v-bind:transactionList='transactionList'
+    />
+    <LoadingList
+      v-if='isLoading'
+    />
+    <div
+      class="no-item"
+      v-if='!isLoading && transactionList.length == 0'
+    >
+      <span>لم تتم إضافة أي شيء حتى الآن</span>
+    </div>
+</div>

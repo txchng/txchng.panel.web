@@ -1,0 +1,96 @@
+<div class="addRemittance">
+  <div class="">
+    <div class="card-header">
+      ثبت اعتبار
+    </div>
+    <div class="card">
+      <form class="">
+        <fieldset
+          class="fieldset"
+          :disabled = isLoading
+        >
+          <div class="remittance-items" id='applicantDiv'>
+            <div class="left-inputs">
+              <CoWorkerSelect
+                id='coworker'
+                :onCoWorkerSelectedMethod='setCoworker'
+                v-bind:token="token"
+              />
+            </div>
+            <label>
+                شرکت همکار
+            </label>
+          </div>
+          <div class="remittance-items">
+              <div class="left-inputs">
+                <input
+                  type="radio"
+                  name="rdaType"
+                  value="1"
+                  v-model='credit.type'
+                  id='rdoIncrease'
+                />
+                <label for="rdoIncrease">
+                  قبض
+                </label>
+
+                <br>
+                <input
+                  type="radio"
+                  name="rdaType"
+                  value="-1"
+                  v-model='credit.type'
+                  id='rdoDecrease'
+                />
+                <label for="rdoDecrease">
+                  صرف
+                </label>
+
+              </div>
+              <label for="creditPrice">
+                نوع
+              </label>
+          </div>
+
+          <div class="remittance-items">
+              <div class="left-inputs">
+                <PriceInput
+                  id='priceInput'
+                  :currencyList='currencyList'
+                  :onValidPriceSelectedMethod='setPrice'
+                />
+              </div>
+              <label for="remittancePrice">المبلغ و العمولة</label>
+          </div>
+          <div id='receiverDiv' class="remittance-items">
+            <textarea
+              name="txtCreditDescription"
+              rows="8"
+              cols="60"
+              v-model='credit.description'
+              placeholder="توضیحات"
+            ></textarea>
+          </div>
+
+          <button
+            class="createCredit"
+            name="createCredit"
+            id="createCredit"
+            @click='createCredit()'
+            :disabled = !isValidForm
+          >
+              تسجیل
+          </button>
+          <button
+                  class="return"
+                  type="button"
+                  name="button"
+                  @click='goToList()'
+          >
+              العودة
+          </button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>

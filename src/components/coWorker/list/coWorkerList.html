@@ -1,0 +1,30 @@
+<ul>
+    <li>
+        <ul class="contacts-header">
+            <li class="width-50">
+                عنوان
+            </li>
+            <li class="width-50">
+                عملیات
+            </li>
+        </ul>
+    </li>
+    <li class="scrollbar">
+        <div v-for='(coworker,index) in coWorkerList' class="items">
+            <CoWorkerListItem
+                    :index="index"
+                    :coWorker='coworker'
+            />
+        </div>
+    </li>
+    <li>
+        <button type="button">
+            <span class="show-more">
+                <!-- <span>                مشاهده موارد بیشتر</span> -->
+                <span>
+                  شاهد المزید
+                </span>
+            </span>
+        </button>
+    </li>
+</ul>

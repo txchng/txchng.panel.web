@@ -1,0 +1,52 @@
+<dl v-if='transaction' :class="[bgColor]">
+    <dt>Register Date:</dt>
+    <dd class="width-15">
+      <DateTimeLabel
+              :date='transaction.registrationDate'
+      />
+
+    </dd>
+    <dt>Price:</dt>
+    <dd class="width-10">
+      <PriceLabel
+        :price = 'transaction.price'
+      />
+    </dd>
+    <dt>Currency:</dt>
+    <dd class="width-10">
+        <CurrencyLabel v-bind:currency='transaction.currency'/>
+    </dd>
+
+    <dt
+      v-if='transaction.customer'
+    >
+      مشتری
+    </dt>
+    <dd class="width-20">
+      {{transaction.customer ? transaction.customer.user.title : transaction._id.toString()}}
+    </dd>
+
+    <dt>Type:</dt>
+    <dd class="width-20">{{transaction.type}}</dd>
+    <dt>Description:</dt>
+    <dd class="width-30 ">
+        <span class="tooltip" :aria-label="transaction.description"> {{transaction.description}}</span>
+       </dd>
+    <dt
+      v-if='transaction.remittance'
+    ></dt>
+    <dd
+      v-if='transaction.remittance'
+      class="width-15"
+    >
+        <button
+
+          type="button"
+          class="tooltip show-detail"
+          aria-label="مشاهدة الحوالة"
+          @click='showRemittanceDetail()'
+        >
+
+        </button>
+    </dd>
+</dl>

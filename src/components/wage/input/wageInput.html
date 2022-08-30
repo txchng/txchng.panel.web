@@ -1,0 +1,21 @@
+<fieldset
+  :disabled=isDisabled
+>
+    <div class="input-group-append">
+        <div class="input-group-text">
+            %
+        </div>
+    </div>
+    <input
+            type="number"
+            name="txtWagePercentage"
+            v-model='wagePercentage'
+            placeholder="النسبة"
+            @input='calculateFromPercentage'>
+    <input
+            type="number"
+            name="txtWagePrice"
+            v-model='wagePrice'
+            placeholder="المبلغ النهائی"
+            @input='calculateFromPrice'>
+</fieldset>

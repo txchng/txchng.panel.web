@@ -1,0 +1,51 @@
+<fieldset>
+    <input
+            type="text"
+            name="txtTitle"
+            v-model='user.title'
+            @input = 'userDataChanged'
+            maxlength="100"
+    >
+    <details>
+        <div class="user-input-details">
+            <input
+                    placeholder="الإسم"
+                    type="text"
+                    name="txtFirstname"
+                    v-model='user.firstname'
+                    @input = 'userDataChanged'
+                    maxlength="100"
+            >
+            <input
+                    placeholder="اللقب"
+                    name="txtLastname"
+                    type="text"
+                    v-model='user.lastname'
+                    @input = 'userDataChanged'
+                    maxlength="100"
+            >
+
+            <input
+                    placeholder="رقم الجوال"
+                    name="txtCellNumber"
+                    type="tel"
+                    v-model='user.cellNumber'
+                    @input = 'userDataChanged'
+                    maxlength="100"
+            >
+
+            <input
+                    placeholder="برید الإلکترونی"
+                    name="txtEmail"
+                    type="email"
+                    v-model='user.email'
+                    @input = 'userDataChanged'
+                    maxlength="100"
+            >
+        </div>
+        <summary>
+            <span class="arrow-down"></span>
+            التفاصیل
+        </summary>
+    </details>
+</fieldset>

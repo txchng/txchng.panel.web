@@ -1,0 +1,93 @@
+<div class="divDistributionPanel">
+    <ConfirmReverseDistributionModal
+            v-if='showReverseRemittanceConfirmModal'
+            :remittance='selectedReveresRemittance'
+            :onCancelMethod='hideReverseDistributionConfrimModal'
+            :onConfirmMethod='reverseDistribution'
+    />
+    <SubmitDisterbutionDeliveryModal
+            v-if='selectedDeliveredRemittance'
+            :remittance='selectedDeliveredRemittance'
+            :onCancelMethod='hideSubmitDeliveryDistributionModal'
+            :onConfirmMethod='deliveredDistribution'
+    />
+    <div class="list-top-options">
+        <!-- <span class="title">درخواست های توافق شده</span> -->
+        <span
+          class="title"
+        >
+          طلبات المتفق علیها
+        </span>
+
+        <a
+          class='exoprtToExcel'
+          :href="'http://116.203.75.73:8002/remittance_distributorCompany/export/'+token"
+          download
+        >
+          Excel
+        </a>
+
+        <DateSelectorInput
+          :onDateTimeSelectedMethod='setDateTime'
+        />
+
+
+        <div class="">
+          <label
+            for="justNew"
+          >
+            قائمة الحوالات غير المسلمة فقط
+          </label>
+
+          <input
+            type="checkbox"
+            id="justNew"
+            name="justNew"
+            v-model='isJustNew'
+            @change="toggleJustNew($event)"
+          >
+
+        </div>
+
+        <div
+          class="left-options"
+        >
+            <DistributionFilter
+              v-if='!isLoading && remittanceList.length > 0'
+              :onFilterObjectChanged='filteChanged'
+            />
+        </div>
+
+    </div>
+
+    <LoadingList
+            v-if='isLoading'
+    ></LoadingList>
+
+    <DistributionList
+      v-if='!isLoading && remittanceList.length > 0  && visibleRemittanceList.length > 0'
+      v-bind:remittanceList='visibleRemittanceList'
+      :onDeliveredSelectedMethod='showSubmitDeliveryDistributionModal'
+      :onReverseSelectedMethod='showReverseDistributionConfrimModal'
+    />
+
+    <div
+      class="no-search-item"
+      v-if='!isLoading && remittanceList.length > 0 && visibleRemittanceList.length == 0'
+    >
+      <!-- <span>
+        هیچ موردی متناسب با جستجوی شما پیدا نشد
+      </span> -->
+      <span>
+        لم یتم العثور علی ما تبحث عنه
+      </span>
+
+    </div>
+    <div
+      class="no-item"
+      v-if='!isLoading && remittanceList.length == 0'
+    >
+        <!-- <span>هنوز چیزی اضافه نشده است</span> -->
+        <span>لم تتم إضافة أي شيء حتى الآن</span>
+    </div>
+</div>

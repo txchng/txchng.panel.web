@@ -1,0 +1,30 @@
+<ul>
+    <li>
+        <ul class="contacts-header">
+            <li class="width-10">
+              کد
+            </li>
+            <li class="width-15">
+              عنوان
+            </li>
+        </ul>
+    </li>
+    <li class="scrollbar">
+    <div
+            v-for='(userPosition,index) in userPositionList' class="items"
+    >
+
+      <UserPositionListItem
+        v-bind:userPosition = 'userPosition'
+      ></UserPositionListItem>
+
+    </div>
+    </li>
+    <!-- <li>
+        <button type="button">
+            <span class="show-more">
+                <span>                شاهد المزید</span>
+            </span>
+        </button>
+    </li> -->
+</ul>

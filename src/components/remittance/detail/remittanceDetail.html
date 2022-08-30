@@ -1,0 +1,12 @@
+<div class="">
+
+  <LoadingList
+    v-if='isLoading'
+  />
+
+  <remittanceSummaryCart
+    v-if='!isLoading && remittance'
+    :remittance = 'remittance'
+  />
+
+</div>

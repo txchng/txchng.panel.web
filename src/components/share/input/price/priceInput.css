@@ -1,0 +1,36 @@
+fieldset {
+    padding: 0;
+    border: none;
+    margin: 0
+}
+
+input {
+    text-align: right;
+    padding: 8px 12px;
+    border: solid 1px #e2e5ed;
+    border-radius: 4px;
+    font-family:Tahoma !important;
+    /*width: 170px*/
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.w-49:first-child {
+    float: right;
+}
+
+.w-49 {
+    width: 49%;
+}
+
+.w-49 input, .w-49 select {
+    width: -webkit-fill-available;
+}

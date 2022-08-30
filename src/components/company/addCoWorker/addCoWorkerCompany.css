@@ -1,0 +1,119 @@
+
+.header-close-btn {
+    background-image: url(../../../assets/images/shared/close.svg);
+    background-repeat: no-repeat;
+    background-size: 13.9px 9.9px;
+    width: 20px;
+    cursor: pointer;
+    height: 12px;
+}
+
+.confirmBtn {
+    width: 112px;
+    height: 38px;
+    box-shadow: 0 1px 1px 0 rgba(43, 26, 24, 0.1);
+    border: solid 1px #1665d8;
+    background-color: #1665d8;
+    border-radius: 4px;
+    color: white;
+}
+
+
+.cancel {
+    width: 64px;
+    margin-right: 15px;
+    height: 38px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+    border: solid 1px #d8dce6;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.modal {
+    width: 555px;
+    margin: 15px;
+    border-radius: 4px;
+    background: #FFFFFF;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.28;
+    text-align: right;
+    color: #3e3f42;
+    margin-bottom: 32px;
+}
+
+
+.modal-footer {
+    padding: 15px 32px;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #eeeeee;
+}
+
+.modal-body {
+    position: relative;
+    padding: 32px;
+}
+
+input {
+    text-align: right;
+    border-radius: 4px;
+    padding: 12px;
+    border: solid 1px #e2e5ed;
+    background-color: #ffffff;
+    margin-bottom: 8px;
+    width: 100%;
+    direction: rtl;
+}
+
+.left-inputs {
+    width: 290px
+}
+
+
+.coworker-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 24px;
+}
+
+label {
+    direction: rtl;
+    font-size: 12px;
+    line-height: 1.92;
+    text-align: right;
+    color: #9ea0a5;
+}
+
+
+.fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+

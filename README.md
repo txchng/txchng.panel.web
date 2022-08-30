@@ -1,2 +1,2 @@
-# txchng.panel.web
-web app of exchange system
+# txhng.panel
+web panel for company 

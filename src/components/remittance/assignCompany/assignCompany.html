@@ -1,0 +1,61 @@
+<div class="assignCompany">
+    <div>
+        <div class="card-header">
+          تعیین الشرکة الزمیلة
+        </div>
+        <div
+          class="card"
+          v-if='remittance'
+        >
+            <RemittanceSummaryCart
+              :remittance='remittance'
+            />
+            <form action="">
+                <fieldset class="fieldset">
+                    <div class="remittance-items">
+                        <div class="left-inputs">
+                            <select
+                              v-model='selectedIntermediateCompany'
+                            >
+                                <option
+                                  v-for='company in companyList'
+                                  :value='company'
+                                >
+                                    {{company.name}}
+                                </option>
+                            </select>
+                        </div>
+                        <label>الشرکة الزمیلة</label>
+                    </div>
+                    <div class="remittance-items">
+                        <div class="left-inputs">
+                            <WageInput
+                              :price='remittance.price'
+                              :onWagePriceSelectedMethod='setWage'
+                            />
+                        </div>
+                        <label>العمولة</label>
+                    </div>
+                    <div class="bottom-border"></div>
+                    <button
+                            type="button"
+                            name="button"
+                            class="createDistribution"
+                            @click='setDisterbuterCompany()'
+                            :disabled = !isValidForm
+                    >
+                        تسجیل العمولة
+                    </button>
+                    <button
+                            class="return"
+                            type="button"
+                            name="button"
+                            @click = 'backToList()'
+                            >
+                        العودة
+                    </button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

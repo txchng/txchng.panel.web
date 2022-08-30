@@ -1,0 +1,90 @@
+.left-inputs select {
+    width: 100%;
+}
+
+select {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+    border: solid 1px #d8dce6;
+    background-color: #ffffff;
+    border-radius: 4px;
+    height: 38px;
+    direction: rtl;
+}
+
+.left-inputs {
+    width: 290px
+}
+
+.bottom-border {
+    margin-bottom: 20px;
+    border-top: 1px solid #eaedf3
+}
+
+
+.createDistribution {
+    margin-left: 16px;
+    box-shadow: 0 1px 1px 0 rgba(22, 29, 37, 0.1);
+    border: solid 1px #1461d2;
+    background-color: #1665d8;
+    color: #fff;
+    border-radius: 4px;
+    width: 116px;
+    float: right;
+    height: 38px;
+}
+
+.return {
+    width: 116px;
+    height: 38px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+    border: solid 1px #d8dce6;
+    background-color: #ffffff;
+    border-radius: 4px;
+    float: right;
+}
+
+.remittance-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 24px;
+}
+
+label {
+    font-size: 12px;
+    line-height: 1.92;
+    text-align: right;
+    color: #9ea0a5;
+}
+
+
+.fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.card-header {
+    font-size: 16px;
+    line-height: 1.69;
+    color: #fff;
+    margin-bottom: 12.5px;
+    text-align: right;
+}
+
+.assignCompany {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 20px;
+}
+
+.card {
+    width: 458px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+    border: solid 1px #eaedf3;
+    background-color: #ffffff;
+    padding: 40px 40px 20px 40px;
+
+}

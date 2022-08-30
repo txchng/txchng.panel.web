@@ -1,0 +1,33 @@
+dl {
+    direction: rtl;
+    overflow: hidden;
+    border-radius: 4px;
+    border: solid 1px #eaecee;
+    background-color: #f9f9f9;
+    padding: 16px;
+    margin: 0 0 25px 0
+}
+
+dt {
+    float: right;
+    width: 50%;
+    padding: 0;
+    font-size: 12px;
+    line-height: 2.4;
+    text-align: right;
+    color: #9ea0a5;
+    background-color: unset;
+    margin: 0
+}
+
+dd {
+    float: left;
+    width: 50%;
+    padding: 0;
+    font-size: 12px;
+    line-height: 2.4;
+    text-align: left;
+    color: #3e3f42;
+    margin: 0
+}
+

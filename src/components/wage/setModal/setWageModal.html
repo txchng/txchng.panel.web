@@ -1,0 +1,30 @@
+<div class="modal-backdrop">
+    <div class="modal">
+        <div class="modal-body">
+            <header class="modal-header">
+                <div class="header-close-btn" @click='close()'></div>
+                <span>
+                  تعیین العمولة
+                </span>
+            </header>
+            <requestSummaryCart
+              :request = 'request'
+            />
+            <div class="form-title">
+              مأدخل مبلغ العمولة او نسبة العمولة
+            </div>
+            <WageInput
+              :price = 'request.price'
+              :onWagePriceSelectedMethod = 'setWagePrice'
+            />
+        </div>
+        <footer class="modal-footer">
+            <button type="reset" class="cancelWage" @click='close()'>
+                الغاء
+            </button>
+            <button @click='save()' type="submit" class="setBtn">
+                تسجیل العمولة
+            </button>
+        </footer>
+    </div>
+</div>

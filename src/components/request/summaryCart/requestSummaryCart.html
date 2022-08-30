@@ -1,0 +1,35 @@
+<dl>
+    <dt>
+        الشرکة الواسطة
+    </dt>
+    <dd>
+        {{request.intermediateCompany.name}}
+    </dd>
+    <dt>
+        المبلغ
+    </dt>
+    <dd>
+      <PriceLabel
+        :price = 'request.price'
+      />
+      <CurrencyLabel
+        :currency='request.currency'
+      />
+    </dd>
+    <dt>
+        المستلم
+    </dt>
+    <dd>
+        {{request.receiverTitle}}
+    </dd>
+    <dt>
+        تاریخ الإتفاق
+    </dt>
+    <dd>
+        <div class="summary-date">
+            <DateTimeLabel
+                    :date='request.createAt'
+            />
+        </div>
+    </dd>
+</dl>

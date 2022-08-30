@@ -1,0 +1,28 @@
+<div class="divCreditPanel">
+
+  <div class="list-top-options">
+      <span class="title">
+        اعتبارات
+      </span>
+  </div>
+
+  <DateSelectorInput
+    :onDateTimeSelectedMethod='setDateTime'
+  />
+
+  <LoadingList
+    v-if = 'isLoading'
+  />
+
+  <CreditList
+    v-if='!isLoading && creditList.length != 0'
+    v-bind:creditList='creditList'
+  />
+
+  <div
+    class="no-item"
+    v-if='!isLoading && creditList.length == 0'
+  >
+    <span>لم تتم إضافة أي شيء حتى الآن</span>
+  </div>
+</div>

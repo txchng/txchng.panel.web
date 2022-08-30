@@ -1,0 +1,273 @@
+
+.Login {
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fbfbfd;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+
+.login-box {
+    display: flex;
+    width: 730px;
+    height: 419.8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+}
+
+form {
+    padding: 40px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    width: 268px;
+    border: solid 1px #e2e5ed;
+    background-color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 4.5px !important;
+    color: #3e3f42 !important;
+}
+
+.bxs-show {
+    width: 20.1px;
+    height: 14px;
+    object-fit: contain;
+    /*background-image: ;*/
+}
+
+.text-left {
+    text-align: left;
+}
+
+button {
+    width: 300px;
+    height: 38px;
+    box-shadow: 0 1px 1px 0 rgba(22, 29, 37, 0.1);
+    border: solid 1px #1461d2;
+    background-color: #1665d8;
+    border-radius: 4.5px !important;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+.forget-pwd {
+    height: 18px;
+    padding-bottom: 31px;
+    padding-top: 8px;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.92;
+    letter-spacing: normal;
+    text-align: right;
+    color: #1665d8;
+}
+
+label {
+    padding-bottom: 8px;
+    height: 18px;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.92;
+    letter-spacing: normal;
+    text-align: right;
+    color: #9ea0a5;
+}
+
+.text-center {
+    text-align: center;
+}
+
+form ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+form ul li {
+    display: grid;
+}
+
+form ul li:first-child {
+    padding-bottom: 16px
+}
+
+form ul li:last-child input {
+    background-image: url(../../../assets/images/Login/bxs-show.svg);
+    background-repeat: no-repeat;
+    background-size: 21px 14px;
+    background-position: 3%;
+}
+
+.login-img {
+    width: 350px;
+    height: 100%;
+    background-image: url(../../../assets/images/Login/login.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.Line-3 {
+    width: 9.9px;
+    height: 1.8px;
+    -webkit-filter: blur(9px);
+    filter: blur(9px);
+    border: solid 1.5px #1665d8;
+}
+
+.company-name {
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px;
+}
+
+.dropdown {
+    min-width: 118px;
+    width: max-content;
+    padding: 10px 20px;
+    z-index: 1;
+    border-radius: 4px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.08);
+    border: solid 1px #eaedf3;
+    background-color: #ffffff;
+}
+
+.multi-lang ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.multi-lang li {
+    color: #fff;
+    display: block;
+    float: left;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    padding: 5px
+
+}
+
+
+.multi-lang li:hover,
+.multi-lang li:focus-within {
+    cursor: pointer;
+}
+
+.multi-lang li:focus-within a {
+    outline: none;
+}
+
+.multi-lang ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 5px;
+    display: none;
+    left: -51px;
+    top: 20px;
+}
+
+.multi-lang ul li:hover > ul,
+.multi-lang ul li:focus-within > ul,
+.multi-lang ul li ul:hover,
+.multi-lang ul li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.multi-lang ul li ul li {
+    clear: both;
+    width: 100%;
+}
+
+.multi-lang-button {
+    background-color: transparent;
+    border: none;
+    color: #6b6c6f;
+    box-shadow: none;
+    background-image: url(../../../assets/images/shared/bx-chevron-down.svg);
+    background-repeat: no-repeat;
+    background-size: 7.9px 4.9px;
+    background-position: 25px 17px;
+    right: 66px;
+    top: -18px;
+    position: relative;
+    width: 124px;
+    height: 38px;
+}
+
+/*//////////////////////////////////////////////////*/
+.company-name span {
+    padding-right: 8px;
+    font-size: 16px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.31;
+    letter-spacing: -0.78px;
+    color: #1665d8;
+}
+
+.multi-lang {
+    position: absolute;
+    margin-top: -26px;
+    width: 12px;
+    height: 12px;
+    background-image: url(../../../assets/images/Login/bx-globe.svg);
+    background-position: center;
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+}
+
+.company-logo {
+    width: 32px;
+    height: 32px;
+    background-image: url(../../../assets/logo.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.welcome-text {
+    padding-bottom: 48px;
+    height: 24px;
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.35;
+    letter-spacing: normal;
+    text-align: right;
+    color: #3e3f42;
+}

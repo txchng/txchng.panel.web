@@ -1,0 +1,95 @@
+.left-inputs {
+    width: 290px
+}
+
+
+.fieldset {
+    border: none;
+    margin: 0;
+    padding: 40px 40px 20px 40px;
+}
+
+.bottom-border {
+    margin-bottom: 20px;
+    border-top: 1px solid #eaedf3
+}
+
+.createRemittance[disabled] {
+    background-color: rgba(22, 101, 216, 0.36);
+    border-color: rgba(22, 101, 216, 0.36);
+    transition: .7s;
+    cursor: unset;
+}
+
+.createRemittance {
+    transition: .7s;
+    margin-left: 16px;
+    box-shadow: 0 1px 1px 0 rgba(22, 29, 37, 0.1);
+    border: solid 1px #1461d2;
+    background-color: #1665d8;
+    color: #fff;
+    border-radius: 4px;
+    width: 116px;
+    height: 38px;
+    float: right;
+}
+
+.return {
+    width: 116px;
+    height: 38px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+    border: solid 1px #d8dce6;
+    background-color: #ffffff;
+    border-radius: 4px;
+    float: right;
+}
+
+.remittance-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 24px;
+}
+
+select {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+    border: solid 1px #d8dce6;
+    background-color: #ffffff;
+    border-radius: 4px;
+    height: 38px;
+    direction: rtl;
+}
+
+
+label {
+    font-size: 12px;
+    line-height: 1.92;
+    text-align: right;
+    color: #9ea0a5;
+}
+
+
+.card-header {
+    font-size: 16px;
+    line-height: 1.69;
+    color: #fff;
+    margin-bottom: 12.5px;
+    text-align: right;
+}
+
+.addRemittance {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 20px;
+    width: 100%;
+    float: right;
+}
+
+.card {
+    width: 540px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+    border: solid 1px #eaedf3;
+    background-color: #ffffff;
+}
